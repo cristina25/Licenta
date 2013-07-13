@@ -12,7 +12,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My Tickets</title>
+    <title> <?php echo $TITLE; ?> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -26,7 +26,7 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    
+      <link href="css/main.css" rel="stylesheet">
   </head>
   
 <!--INDEX-->
@@ -57,11 +57,11 @@
              <p class="navbar-text  pull-right">
                  
            <?php  if(isset($_SESSION['user'])) { ?>
-	              Logged in as <a href="index.php?pagina=admin" class="navbar-link"><?php echo $_SESSION['user']; ?></a>
+	              Logged in as <a href="index.php?pagina=user" class="navbar-link"><?php echo $_SESSION['user']; ?></a>
 	                <a href="pagini/logout.php" class="navbar-link" style="margin-left:20px;">LOGOUT</a>
 	                <?php } else { ?> 
-	             <a href="index.php?pagina=admin" class="navbar-link"><b> Login </b></a>
-                     <a href="index.php?pagina=register" class="navbar-link"><b> Register </b></a>
+	             <a href="index.php?pagina=user" class="navbar-link"><b> Login </b></a>
+               <a href="index.php?pagina=register" class="navbar-link"><b> Register </b></a>
 	              <?php } ?>
              </p>
           </div><!--/.nav-collapse -->
@@ -79,7 +79,7 @@
       <hr>
 
       <footer>
-        <p>Pagina mea</p>
+        <p> &copy <?php echo $TITLE?> 2013</p>
       </footer>
 
     </div> <!-- /container -->
