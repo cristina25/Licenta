@@ -3,9 +3,8 @@
 
     <?php
     include 'configuratie.php';
+    include 'functii.php';
      ?>
-
-
 
 
 <?php session_start(); ?>

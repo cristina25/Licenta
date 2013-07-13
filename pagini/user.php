@@ -1,8 +1,7 @@
 <!--LOGIN-->
 <?php  if(!isset($_SESSION['user']) && isset($_POST['username']))
      {
-
-        include 'pagini/functii.php';
+        //include_once 'pagini/functii.php';
         login($_POST['username'],$_POST['password']);
       }
 	

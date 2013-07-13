@@ -3,9 +3,9 @@
 
 <h1 class="muzica" width="10">Alegeti stilul preferat!</h1>
 
-<div class="btn-group">
+<div class="btn-group" action="">
     
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#Concert1">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
     R&b
     <span class="caret"></span>
   </a>
