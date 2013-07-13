@@ -2,8 +2,8 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>WELCOME</h1>
-        <p>Bilete concerte wordwide!</p>
-       // <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <p>Bilete concerte!</p>
+       <!-- <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
       

@@ -11,7 +11,7 @@ function login($username,$password){
 		
 		$_SESSION['user'] = $_POST['username'];
 		
-		header('Location: index.php?pagina=admin');
+		header('Location: index.php?pagina=user');
 	}
 	else { 
 		unset($_POST['username']);

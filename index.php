@@ -46,10 +46,10 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="index.php?pagina=contact">Music</a></li>
-              <li><a href="index.php?pagina=contact">Concerte</a></li>
-              <li><a href="index.php?pagina=contact">Rezervari</a></li>
-              <li><a href="index.php?pagina=contact">Locatii</a></li>
+              <li><a href="index.php?pagina=music">Music</a></li>
+              <li><a href="index.php?pagina=concerte">Concerte</a></li>
+              <li><a href="index.php?pagina=rezervari">Rezervari</a></li>
+              <li><a href="index.php?pagina=locatii">Locatii</a></li>
               <li><a href="index.php?pagina=contact">Contact</a></li>
                 
             </ul>
