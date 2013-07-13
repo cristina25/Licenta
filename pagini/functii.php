@@ -2,10 +2,9 @@
 
 <?php  
 function login($username,$password){
-if(!isset($_SESSION['user']) && isset($_POST['username']))
-       mysql_select_db($DATABASE_NAME);
-	$password=md5($_POST['password']);
-	$query="SELECT id_client FROM clienti WHERE username='$_POST[username]' AND password='$password'";
+    mysql_select_db($DATABASE_NAME);
+	//$password=md5($password);
+	$query="SELECT id FROM useri WHERE username='$username' AND password='$password'";
 	
 	if(mysql_fetch_row(mysql_query($query)))
 	{

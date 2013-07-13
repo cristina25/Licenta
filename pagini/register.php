@@ -1,32 +1,45 @@
 
 
 <!--FORM-->
+<p1 class="anunt">*Pentru a putea sa rezervati bilete va rugam sa va inregistrati.</p1><br>
+<link  rel="stylesheet" href="css/user_login_form.css"/>
+<div class="container" id="login-page">
+        <div class="content">
+            <div class="row">
+                <div class="login-form">
+                    <h2>Register</h2>
+                    <form action="" method='post'>
+                        <fieldset>
+                            <div class="clearfix">
+                                <input type="text" name='username' placeholder="Username">
+                            </div>
+                            <div class="clearfix">
+                                <input type="password" name='password' placeholder="Parola">
+                            </div>
+                            <div class="clearfix">
+                                <input type="text" name="nume" placeholder="Nume">
+                            </div>
+                             <div class="clearfix">
+                                <input type="text" name="prenume" placeholder="Prenume">
+                            </div>
+                             <div class="clearfix">
+                                <input type="text" name="adresa" placeholder="Adresa">
+                            </div>
+                             <div class="clearfix">
+                                <input type="text" name="email" placeholder="Email">
+                            </div>
+                             <div class="clearfix">
+                                <input type="text" name="telefon" placeholder="Telefon">
+                            </div>
+                            <button class="btn primary" type="submit">Register</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div> <!-- /container -->
 
-<form action="" method="post">
-    
-<p1>Pentru a putea sa rezervati bilete va rugam sa va inregistrati.</p1><br>
-<br>
-Username*:<br>   
-<input type="text" name="username" value=""><br>
-Parola*:<br> 
-<input type="text" name="parola" value=""><br>
-Nume:<br> 
-<input type="text" name="nume" value=""><br>
-Prenume*:<br> 
-<input type="text" name="prenume" value=""><br>
 
-Adresa:<br> 
-<input type="text" name="adresa value=""><br>
-
-Email*:<br> 
-<input type="text" name="email" value=""><br>
-Telefon: 
-<br> <input type="text" name="telefon" value=""><br>
-
- <input type="submit"  name="submit" value="Inregistrare"/> 
-    
-    
-</form>
 
 <!--VALIDARE-->
 

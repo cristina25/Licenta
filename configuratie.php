@@ -4,7 +4,7 @@
     Pentru conexiunea cu baza de date 
  
  */
-$DATABASE_NAME="bd";
+$DATABASE_NAME="tickets";
 $SERVER_NAME="localhost";
 $USERNAME="root";
 $PASSWORD="";
