@@ -11,3 +11,65 @@
 #concerte{
     width: 1200px;
 }
+#concert-span2{
+    
+    width:25%;
+}
+#concert-span10{
+    width:70%;
+    
+}
+
+.poza-concert{
+    width: 225px;
+    height: 300px;
+}
+
+
+#home {
+    width: 1200px;
+padding: 61px;
+margin-bottom: 30px;
+font-size: 20px;
+font-weight: 200;
+line-height: 30px;
+color: inherit;
+background-color: rgba(204, 30, 37, 0.41);
+}
+
+#co1{
+    
+ padding: 62px;
+margin-bottom: -22px;
+font-size: 19px;
+font-weight: 200;
+line-height: 38px;
+color: inherit;
+background-color: rgba(183, 224, 219, 0.66);   
+    
+}
+
+#myBtn{
+    background-image: linear-gradient(to bottom, #00CCB4, #0072CC);
+}
+#h1{
+font-size: 35px;
+}
+
+#user_span3{
+    width: 256px;
+    
+}
+
+#home .eu{
+  margin-bottom: 1;
+ font-size: 34px;
+ line-height: 2;
+ color: inherit;
+ letter-spacing: -1px;
+    
+}
+
+#cls_id{
+font-size: 28px;
+}

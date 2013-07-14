@@ -19,6 +19,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
+        
       body {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -29,8 +30,47 @@
   </head>
   
 <!--INDEX-->
-  
-<body>
+  <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "concerte"){
+      ?>
+      <body style="background-image:url('imagini_ev/c1.jpg');">
+      <?php
+  }}else{
+      
+       
+      ?>
+  <body style="background-image:url('imagini_ev/wall.jpg');"> 
+      <?php
+       
+      ?>
+      <body>
+          <?php
+  }
+?>
+
+          
+          
+          
+          <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "home"){
+      ?>
+      <body style="background-image:url('imagini_ev/wall.jpg');">
+      <?php
+  }}else{
+      
+       
+      ?>
+      <body>
+          <?php
+  }
+  ?>
+          
+          
+         
+          
+          
+          
+          
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -44,7 +84,7 @@
           <!--<a class="brand" href="#">Bilete la concertele preferates</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="index.php?pagina=home">Home</a></li>
               <li><a href="index.php?pagina=music">Music</a></li>
               <li><a href="index.php?pagina=concerte">Concerte</a></li>
               <li><a href="index.php?pagina=rezervari">Rezervari</a></li>
@@ -57,10 +97,11 @@
                  
            <?php  if(isset($_SESSION['user'])) { ?>
 	              Logged in as <a href="index.php?pagina=user" class="navbar-link"><?php echo $_SESSION['user']; ?></a>
-	                <a href="pagini/logout.php" class="navbar-link" style="margin-left:20px;">LOGOUT</a>
+	                <a href="pagini/logout.php" class="navbar-link" style="margin-left:20px;">Logout</a>
 	                <?php } else { ?> 
-	             <a href="index.php?pagina=user" class="navbar-link"><b> Login </b></a>
-               <a href="index.php?pagina=register" class="navbar-link"><b> Register </b></a>
+                        
+	             <a href="index.php?pagina=user" class="navbar-link" style="margin-left:20px;"><b> Login </b></a>
+               <a href="index.php?pagina=register" class="navbar-link" style="margin-left:20px;"><b> Register </b></a>
 	              <?php } ?>
              </p>
           </div><!--/.nav-collapse -->

@@ -1,3 +1,4 @@
+
 <!--LOGIN-->
 <?php  if(!isset($_SESSION['user']) && isset($_POST['username']))
      {
@@ -7,7 +8,6 @@
 	
 ?>
 	
- 
 <?php if(!isset($_SESSION['user']) && !isset($_POST['username'])) {  ?>
 
                 <link  rel="stylesheet" href="css/user_login_form.css"/>
@@ -37,39 +37,36 @@
 	{
 		?>
 		<div class="row-fluid">
-	        <div class="span3">
-	          <div class="well sidebar-nav affix mymenu">
-	          	<h4>Masini</h4>
+	        <div class="span3" >
+	          <div class="well sidebar-nav affix mymenu" id="user_span3">
+                      
+	          	<h4>Bine ati venit pe pagina de admin! </h4
+                        
 	            <ul class="nav nav-list">
-	              <li class="nav-header">Vizualizare detalii</li>
-	              <li class="active"><a href="?page=user&&action=view#brand">Vezi marci si modele</a></li>
-	              <li><a href="?page=user&&action=view#engine">Vezi motoare</a></li>
-	              <li><a href="?page=user&&action=view#extras">Vezi extra-optiuni</a></li>
-	              <li><a href="?page=user&&action=view#packages">Vezi pachete existente</a></li>
-	              <li><a href="?page=user&&action=joins">Join (4 left)</a></li>
-	              <li><a href="?page=user&&action=hard">Hard (4 left)</a></li>
+	              <li class="nav-header"> Vizualizare baza de date </li>
+	              <li class="active"><a href="?pagina=user&&action=vizualizare#brand">Vezi concerte disponibile</a></li>
+	              <li><a href="?pagina=user&&action=vizualizare#engine">Vezi locatii dispobibile</a></li>
+	              <li><a href="?pagina=user&&action=vizualizare#extras">Vezi trupe</a></li>
+	              
+                      
 	              <li class="nav-header">Adauga</li>
-	              <li><a href="?page=user&&action=add#brand">Adauga marca sau model</a></li>
-	              <li><a href="?page=user&&action=add#engine">Adauga motor</a></li>
-	              <li><a href="?page=user&&action=add#extras">Adauga extra-optiune</a></li>
-	              <li><a href="?page=user&&action=add#packages">Adauga un pachet nou</a></li>
-	              <li class="nav-header">Editeaza</li>
-	              <li><a href="?page=user&&action=edit#brand">Editeaza</a></li>
-	              <li><a href="?page=user&&action=edit#engine">Editeaza motor</a></li>
-	              <li><a href="?page=user&&action=edit#extras">Editeaza extra-optiune</a></li>
-	              <li><a href="?page=user&&action=edit#packages">Editeaza un pachet nou</a></li>
+	              <li><a href="?pagina=user&&action=adaugare#concerte">Adauga concert</a></li>
+	              <li><a href="?pagina=user&&action=adaugare#locatii">Adauga locatii</a></li>
+	              <li><a href="?pagina=user&&action=adaugare#trupe">Adauga trupe</a></li>
+	              
+                      
 	              <li class="nav-header">Sterge</li>
-	              <li><a href="?page=user&&action=delete#brand">Sterge</a></li>
-	              <li><a href="?page=user&&action=delete#engine">Sterge motor</a></li>
-	              <li><a href="?page=user&&action=delete#extras">Sterge extra-optiune</a></li>
-	              <li><a href="?page=user&&action=delete#packages">Sterge un pachet</a></li>
+	              
+	              <li><a href="?pagina=user&&action=stergere#concerte">Sterge concerte</a></li>
+	              <li><a href="?pagina=user&&action=stergere#locatii">Sterge locatii</a></li>
+	              <li><a href="?pagina=user&&action=stergere#trupe">Sterge trupe</a></li>
 
 	            </ul>
 	          </div><!--/.well -->
 	        </div><!--/span-->
 	        <div class="span9">
-	          <?php if(!isset($_GET['action']) || $_GET['action']=='home') include 'opening.php'; 
-	          	else include $_GET["action"] . '.php'; ?>
+	          <?php if(!isset($_GET['action']) || $_GET['action']=='home') include 'admin/vizualizare.php'; 
+	          	else include 'admin/'.$_GET["action"] . '.php'; ?>
 	      </div><!--/row-->
 		<?php
 	}
