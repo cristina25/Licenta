@@ -44,7 +44,7 @@ while($row=mysql_fetch_array($result))
 
 <br>
 <br>
-<p><b> Raport Nr.2 </b>: Vizualizare formatii pe fiecare categorie 'r&b'.</p>
+<p><b> Raport Nr.2 </b>: Vizualizare formatii din categoria 'r&b'.</p>
 
 <table class="table">
      <tr>
@@ -55,28 +55,22 @@ while($row=mysql_fetch_array($result))
         
         <?php
 
-$query = "SELECT trupa,gen FROM trupe WHERE gen=3 ";
+$query = "SELECT nume,gen FROM trupe WHERE gen=3 ";
 $result = mysql_query($query);
 while($row=mysql_fetch_array($result))
 {
-   $query2 = "SELECT  from trupe WHERE id = $row[trupa]";
+   $query2 = "SELECT nume from genuri WHERE id = $row[gen]";
   $result2 = mysql_query($query2);
-  $trupa = mysql_fetch_row($result2);
-  // in $trupa[0] ai numele trupei
+  $gen = mysql_fetch_row($result2);
+  // in $gen[0] ai tip gen
 
-  $query2 = "SELECT nume,oras from locatii where id =  $row[locatie]";
-  $result2 = mysql_query($query2);
-  $locatie = mysql_fetch_row($result2);
-  // in $locatie[0] ai numele locatiei
- // in $locatie[1] ai numele orasului
 
 ?>
                      
          <tr>
                 <td><?php echo $row['nume'];?> </td>
-                <td><?php echo $locatie[0]." ".$locatie[1];?> </td>
-                <td><?php echo $trupa[0];?> </td>
-                <td><?php echo $row['data'];?> </td>
+                <td><?php echo $gen[0];?> </td>
+                
                
                 </tr>
 
@@ -84,3 +78,7 @@ while($row=mysql_fetch_array($result))
       }
 ?>
 </table>
+
+<br>
+<br>
+<p><b> Raport Nr.3 </b>: Vizualizare formatii din categoria 'r&b'.</p>

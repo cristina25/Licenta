@@ -15,6 +15,7 @@
   
    $query="SELECT nr_bil,id FROM rezervari WHERE user='$_SESSION[id]' AND bilet=$row[0]";
    $result=mysql_query($query);
+   
    if($row=mysql_fetch_row($result)){
             
        //update
@@ -71,7 +72,7 @@ if(!isset($_SESSION['rezervari']) || $_SESSION['rezervari'] == null){ ?>
         
         </tr>
 <?php
-$query="SELECT * FROM rezervari WHERE user=$_SESSION[id]";
+$query="SELECT * FROM rezervari WHERE user='$_SESSION[id]'";
 $result=mysql_query($query);
 while($p=mysql_fetch_array($result))
 {
@@ -117,7 +118,7 @@ while($p=mysql_fetch_array($result))
 
 <!--Afisez pretul total-->
 <h3>Pret Total Comanda: <?php print $pretTotal; ?>Lei</h3>
-<a href="index.php?pagina=livrare">Trimite comanda!</a>
+<a href="index.php?pagina=livrare">Completeaza adresa unde iti va fi expediat biletul!</a>
 <?php } ?>
 
 
