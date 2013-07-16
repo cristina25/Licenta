@@ -12,7 +12,7 @@
 <a href="#locatii" id="locatii"></a>
 <h2>Locatii disponibile:</h2>
 
-<table class="table table-striped">
+<table class="table">
 	<tr>
 		<th>Nume:</th>
 		<th>Oras:</th>
@@ -42,7 +42,7 @@
 
 <h2>Trupe anuntate:</h2>
 <a href="#trupe" id="trupe"></a>
-<table class="table table-striped">
+<table class="table">
 	<tr>
 		<th>Nr:</th>
 		<th>Nume:</th>
@@ -75,7 +75,7 @@
 
 <h3>Concerte:</h3>
 <a href="#concerte" id="concerte"></a>
-<table class="table table-striped">
+<table class="table">
 	<tr>
 		<th>Id:</th>
 		<th>Nume:</th>

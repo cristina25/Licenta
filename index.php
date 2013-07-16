@@ -30,14 +30,21 @@
   </head>
   
 <!--INDEX-->
+ <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "locatii"){
+      ?>
+      <body style="background-image:url('imagini_ev/locatii.jpg');">
+      <?php
+  } ?>
+           <body> <?php } ?>
+               
+
   <?php if(isset($_GET['pagina'])){ 
           if($_GET['pagina'] == "concerte"){
       ?>
-      <body style="background-image:url('imagini_ev/c1.jpg');">
+      <body style="background-image:url('imagini_ev/c3.jpg');">
       <?php
-  }}else{
-      
-       
+  }}else{  
       ?>
   <body style="background-image:url('imagini_ev/wall.jpg');"> 
       <?php
@@ -49,8 +56,7 @@
 ?>
 
           
-          
-          
+             
           <?php if(isset($_GET['pagina'])){ 
           if($_GET['pagina'] == "home"){
       ?>
@@ -65,7 +71,40 @@
   }
   ?>
           
-          
+           <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "user"){
+      ?>
+      <body style="background-image:url('imagini_ev/reg.jpg');">
+      <?php
+  } ?>
+           <body> <?php } ?>
+               
+            <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "contact"){
+      ?>
+      <body style="background-image:url('imagini_ev/reg.jpg');">
+      <?php
+  } ?>
+           <body> <?php } ?>
+               
+               
+                <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "admin"){
+      ?>
+      <body style="background-image:url('imagini_ev/reg.jpg');">
+      <?php
+  } ?>
+           <body> <?php } ?>
+               
+               
+                
+          <?php if(isset($_GET['pagina'])){ 
+          if($_GET['pagina'] == "register"){
+      ?>
+      <body style="background-image:url('imagini_ev/reg.jpg');">
+      <?php
+  } ?>
+           <body> <?php } ?>
          
           
           
@@ -81,12 +120,12 @@
           </button>
             
             <!--MENIU-->
-          <!--<a class="brand" href="#">Bilete la concertele preferates</a>-->
+          <!--<a class="brand" href="#">Bilete la concertele preferate</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="index.php?pagina=home">Home</a></li>
-              <li><a href="index.php?pagina=music">Music</a></li>
               <li><a href="index.php?pagina=concerte">Concerte</a></li>
+              <li><a href="index.php?pagina=rapoarte">Rapoarte</a></li>
               <li><a href="index.php?pagina=rezervari">Rezervari</a></li>
               <li><a href="index.php?pagina=locatii">Locatii</a></li>
               <li><a href="index.php?pagina=contact">Contact</a></li>

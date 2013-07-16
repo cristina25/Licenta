@@ -6,11 +6,11 @@ if (!isset($_REQUEST['action']))
     ?> 
 <form  action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="action" value="submit"> 
-    Numele dvs:<br> 
+    <b>Numele dvs:</b><br> 
     <input name="name" type="text" value="" size="30"/><br> 
-    Email:<br> 
+   <b> Email:</b><br> 
     <input name="email" type="text" value="" size="30"/><br> 
-    Mesajul:<br> 
+    <b>Mesajul:</b><br> 
     <textarea name="message" rows="7" cols="30"></textarea><br> 
     <input type="submit" value="Trimite email"/> 
     </form>

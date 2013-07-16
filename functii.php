@@ -64,7 +64,7 @@ function obtine_id_gen($gen){
     
     
 }
-      //FUNCTII PENTRU ADAUGARI IN COMENZI
+      //FUNCTII PENTRU ADAUGARI IN REZERVARI
 function adaugaRezervare($username,$nr_bil){
     $ui=uniqid();
     conectare();

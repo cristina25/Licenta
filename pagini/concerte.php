@@ -11,9 +11,12 @@
 	    </p>
          </div>
 
+
+
 <div class="container" id="concerte">
     
 <br/>
+
 <div style="width:1200px">
 <h3><a href="#" id="rANDb">R&b Style</a></h3>
 
@@ -50,6 +53,9 @@
 
 </div>
 <br/>
+
+
+
 <div style="width:1200px">
 <h3><a href="#" id="house">House</a></h3>
 
@@ -84,6 +90,7 @@
             <div class="span4" style="height:380px"></div>
        <?php } ?>
 <br/>
+
 <h3><a href="#" id="rock">Rock</a></h3>
 
 <?php
@@ -119,6 +126,8 @@
 
 </div>
 <br/>
+
+
 <h3><a href="#" id="jazz">Jazz</a></h3>
 
 <?php
@@ -187,51 +196,36 @@
             <div class="span4" style="height:380px"></div>
        <?php } ?>
 
+<h3><a href="#" id="pop">Pop:</a></h3>
 
-
-
-
-
-
-
-
-  
- 
- <!--
-	
-<table class="table-bordered table-hover brand-table">
-	<tr>
-		<th>#</th>
-		<th>Name</th>
-	</tr>
-
-
-<div class="row">
-        <div class="span4">
-          <h2>Sunny Summer Nights</h2>
-          <p></p>
-          <p><a class="btn" href="#">Detalii &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Joe Cocker</h2>
-          <p>text </p>
-          <p><a class="btn" href="#">Detalii &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Vara Magica</h2>
-          <p>text</p>
-          <p><a class="btn" href="#">Detalii&raquo;</a></p>
-        </div>
-      </div>
 <?php
-/*
-$query="SELECT * FROM imagini";
- $result = mysql_query($query);
- while ($row = mysql_fetch_array($result)) {
- ?>   
-<image src="<?php echo $row['adresa']; ?>" class="preview-concert">
-<?php } ?>
+        $gen = "pop";
+	$i=0;
+        $gen_id = obtine_id_gen($gen);
+        $query="SELECT c.*  FROM trupe t,concerte c WHERE c.trupa=t.id 
+            AND t.gen='$gen_id'";
+        $result = mysql_query($query);
+        while($row = mysql_fetch_array($result))
+        { 
+            $i++;
+            $query = "SELECT adresa FROM imagini WHERE concert = $row[id]";
+           // var_dump($query);
+            $result2 = mysql_query($query);
+            $adresa = mysql_fetch_row($result2);
+            $adresa = $adresa[0];
+            ?>
 
-*/
-?>
-</div>
+        <div class="span4">
+          <h2> <?php echo $row['nume'];?> </h2>
+          <img src="<?php echo $adresa;?>" class="preview-concert"/>
+          <p><a class="btn" href="index.php?pagina=concert&&concert=<?php echo $row['id'];  ?>">Detalii &raquo;</a></p>
+          <p><a class="btn" href="index.php?pagina=concerte&&concert=<?php echo $row['id'];  ?>">Rezerva &raquo;</a></p>
+        </div>
+ 
+   <?php
+            
+        }
+        while($i%3!=0){ $i++; ?>
+            <div class="span4" style="height:380px"></div>
+       <?php } ?>
+
